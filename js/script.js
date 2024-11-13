@@ -715,7 +715,7 @@ function findUserByEmail(email) {
 
 function findUserBySession(email) {
   console.log(email);
-  userArr = user.find((u) => u.email === email);
+  userArr = user.find((u) => u.email == email);
   sessionStorage.setItem("idArr", userArr.id);
 }
 
