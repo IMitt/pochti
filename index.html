@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <section class="sign">
+    <div class="sign-section__wrapper" onclick="sign()">
+      <p class="sign-section__title text_white">Дневник тренировок</p>
+      <p class="sign-section__slogan">Планируйте тренировки вместе с нами</p>
+    </div>
+    <div class="signIn">
+      <p style="text-align: center">Добро пожаловать</p>
+      <input type="email" placeholder="Email" class="input signInEmail" onchange="emailValidate()" oninput="this.value = this.value.replace(/\s/g, '')"/>
+      <input type="password" placeholder="Пароль" class="input signInPassword" onchange="passwordValidate()" oninput="this.value = this.value.replace(/\s/g, '')"/>
+    </div>
+    <div class="signUp">
+      <input type="email" placeholder="Email" class="input signUpEmail" onchange="emailValidateSignUp()" oninput="this.value = this.value.replace(/\s/g, '')"/>
+      <input type="password" placeholder="Пароль" class="input signFirstUpPassword" onchange="passwordValidateSignUpFirst()" oninput="this.value = this.value.replace(/\s/g, '')"/>
+      <p class="error password-error">
+        1 заглавная, 1 строчная, 4 цифры, 8 символов
+      </p>
+      <input type="password" placeholder="Пароль повторно" class="input signSecondUpPassword" oninput="this.value = this.value.replace(/\s/g, '')"/>
+      <p class="error password-errorSecond">
+        Пароли не совпадают!
+      </p>
+      <div class="documentation">
+        <input type="checkbox" class="check" value="activate"/>
+        <p>
+          Я согласен с
+          <a href="" class="linkCreate">правилами и положениями о конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+    <div class="btn-section">
+      <button class="btnSignUp btnTwo" onclick="signUpp()" id="create">Создать аккаунт</button>
+      <div class="or">
+        <div class="line"></div>
+        <div>Или</div>
+        <div class="line"></div>
+      </div>
+      <button class="btnSignIn btnFirst" onclick="signInn()" id="btnSignIn">Войти</button>
+    </div>
+  </section>
+  <section class="step step_one">
+    <div class="step-section__text">
+      <p class="step-section__text text">Шаг 1 из 3</p>
+      <p class="step-section__title text">
+        Какой у вас вес в киллограммах на данный момент? 
+      </p>
+    </div>
+    <input type="number" class="btnFirst btnSignIn" name="ves" id="weightInput" oninput="ValidateFirstStep()" oninput="this.value = this.value.replace(/\s/g, '')"/>
+    <p class="error weightErrorFirst">больше 40 КГ и меньше 120 КГ</p>
+    <button class="btnSignUp btnTwo setWight" onclick="stepTwo()">Следующий шаг</button>
+  </section>
+  <section class="step step_two">
+    <div class="step-section__text">
+      <p class="step-section__text text">Шаг 2 из 3</p>
+      <p class="step-section__title text">
+        Какая у вас цель по весу?
+      </p>
+    </div>
+    <input type="number" class="btnSignIn btnFirst" name="vesGoal" id="goalWeightInput" oninput="ValidateSecondStep()" oninput="this.value = this.value.replace(/\s/g, '')" />
+    <p class="error goalErrorFirst">больше 40 КГ и меньше 120 КГ</p>
+    <button class="btnSignUp btnTwo setGoal" onclick="stepThree()">Следующий шаг</button>
+  </section>
+  <section class="step step_three">
+    <div class="step-section__text">
+      <p class="step-section__text text">Шаг 3 из 3</p>
+      <p class="step-section__title text">
+        Какой у вас рост?
+      </p>
+    </div>
+    <input type="number" class="btnSignIn btnFirst" name="heigh" id="heightInput" oninput="ValidateThreeStep()" oninput="this.value = this.value.replace(/\s/g, '')"/>
+    <p class="error heightErrorFirst">больше 140 СМ и меньше 220 СМ</p>
+    <button class="btnSignUp btnTwo setHeight" onclick="main()">Начать тренировки!</button>
+  </section>
+  <section class="main-section">
+    <div class="main-section__header">
+      <div class="main-section__header_text">
+        <p class="welcome">Здравстуйте <span class="userNameContainer">, пользователь</span>!</p>
+        <p class="main-section__slogan">Начните день с тренировки</p>
+      </div>
+      <div class="avatar" onclick="goToProfile()"></div>
+    </div>
+    <div class="main-section__plan">
+      <div class="main-section__plan_wrapper" onclick="goToAllPlans()">
+        <div class="main-section__go">
+          <p class="main-section__plan_title">Планы тренировок</p>
+          <img src="img/goTo.png" alt="" class="goTo" />
+        </div>
+        <div>
+          <p href="" class="linkCreate">Ещё</p>
+        </div>
+      </div>
+      <div class="plan-card" onclick="goToPlan()" data-id="2" data-ids="[2,46,32,45,22]">
+        <div>
+          <p class="plan-card__title">Medium Workout</p>
+          <p class="plan-card__text">Средняя тренировка всего тела</p>
+        </div>
+        <div class="plan-card__btn-wrapper">
+          <button class="plan-card__btn"><img src="img/time.svg" alt="" class="plan-card__btn-img">30 мин</button>
+          <button class="plan-card__btn"><img src="img/kall.svg" alt="" class="plan-card__btn-img">350 ККал</button>
+        </div>
+      </div>
+    </div>
+    <div class="main-section__plan">
+      <div class="main-section__plan_wrapper" onclick="goToAllExercise()">
+        <div class="main-section__go">
+          <p class="main-section__plan_title">Упражнения</p>
+          <img src="img/goTo.png" alt="" class="goTo" />
+        </div>
+        <div>
+          <p href="" class="linkCreate">Ещё</p>
+        </div>
+      </div>
+      <div class="exercise" data-musclesid="2" data-ids="[11,12,13,14,15,16,17,18,19,20]">
+        <div>
+          <p class="exercise__title">Грудные мышцы</p>
+        </div>
+      </div>
+      <div class="footer">
+        <button class="footer__btn footer__btn-1"></button>
+        <button class="footer__btn footer__btn-2" onclick="goToStatus()"></button>
+        <button class="footer__btn footer__btn-3" onclick="goToProfile()"></button>
+      </div>
+  </section>
+  <section class="status-section">
+    <div class="main-section__header">
+      <div class="main-section__header_text">
+        <p class="welcome">Здравстуйте <span class="userNameContainer">, пользователь</span>!</p>
+        <p class="main-section__slogan">Начните день с тренировки</p>
+      </div>
+      <div class="avatar" onclick="goToProfile()"></div>
+    </div>
+    <div class="status-info__wrapper">
+      <div class="user-info">
+        <div class="user-info_card">
+          <img src="img/Вес.png" alt="" />
+          <p class="user-info__title"><span class="userVes"></span> KG</p>
+          <p class="user-info__text">Вес</p>
+        </div>
+        <div class="user-info_card">
+          <img src="img/Рост.png" alt="" />
+          <p class="user-info__title"><span class="userHeight"></span> СМ</p>
+          <p class="user-info__text">Рост</p>
+        </div>
+        <div class="user-info_card">
+          <img src="img/Цель.png" alt="" />
+          <p class="user-info__title"><span class="userGoal"></span> KG</p>
+          <p class="user-info__text">Цель</p>
+        </div>
+      </div>
+      <div class="grific-info">
+        <img src="img/график.png" alt="">
+      </div>
+      <div class="purposes-info">
+        <div class="user-info_card">
+          <img src="img/Вес.png" alt="" />
+          <p class="user-info__title imt">60 KG</p>
+          <p class="user-info__text">ИМТ</p>
+        </div>
+        <div class="user-info_card">
+          <img src="img/Рост.png" alt="" />
+          <p class="user-info__title ideal_weight">176 см</p>
+          <p class="user-info__text">Идеальный вес</p>
+        </div>
+      </div>
+    </div>
+    <div class="user-plan">
+      <p>Ваши программы</p>
+      <div id="workoutList">
+        <p class="workoutList__clear"></p>
+      </div>
+      <div id="workoutDetails"></div>
+    </div>
+    <div class="footer">
+      <button class="footer__btn footer__btn-1" onclick="goToMain()"></button>
+      <button class="footer__btn footer__btn-2"></button>
+      <button class="footer__btn footer__btn-3" onclick="goToProfile()"></button>
+    </div>
+  </section>
+  <section class="profile-section">
+    <div class="profile-section__top">
+      <div class="main-section__header">
+        <div class="main-section__header_text">
+          <p class="welcome">Здравстуйте <span class="userNameContainer">, пользователь</span>!</p>
+          <p class="main-section__slogan">Начните день с тренировки</p>
+        </div>
+        <div class="avatar" onclick="goToProfile()"></div>
+      </div>
+      <div class="profile-section__main">
+        <div class="profile-section__link profile-section__plan" onclick="goToPlanAtProfile()">
+          <p>Планы тренировок</p>
+          <img src="img/goTo(white).png" alt="">
+        </div>
+        <div class="profile-section__link">
+          <p>История тренировок</p>
+          <img src="img/goTo(white).png" alt="">
+        </div>
+        <div class="profile-section__link" onclick="goToEditing()">
+          <p>Редактирование личных данных</p>
+          <img src="img/goTo(white).png" alt="">
+        </div>
+        <div class="profile-section__link admin" onclick="goToAddExercise()">
+          <p>Добавить упражнение</p>
+          <img src="img/goTo(white).png" alt="">
+        </div>
+        <div class="profile-section__link trainer admin" onclick="goToAddPlan()">
+          <p>Добавить план тренировки</p>
+          <img src="img/goTo(white).png" alt="">
+        </div>
+        <div class="profile-section__link admin" onclick="goToUserForm()">
+          <p>Управление пользователями</p>
+          <img src="img/goTo(white).png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="profile-section__bottom">
+      <div class="profile-section__exit">
+        <img src="img/icons8-выйти-64 1.png" alt="">
+        <p>Выйти</p>
+      </div>
+      <div class="footer">
+        <button class="footer__btn footer__btn-1" onclick="goToMain()"></button>
+        <button class="footer__btn footer__btn-2" onclick="goToStatus()"></button>
+        <button class="footer__btn footer__btn-3"></button>
+      </div>
+    </div>
+  </section>
+  </section>
+  <section class="allPLans-section">
+    <div class="allPLans-section__title" onclick="backToMain()">
+      <img src="img/back(white).svg" alt="">
+      <p>Планы тренировок</p>
+    </div>
+    <div class="allPLans-section__wrapper"></div>
+    </div>
+  </section>
+    <section class="editingData_section">
+      <div class="allPLans-section__title" onclick="goToProfile()">
+        <img src="img/back(white).svg" alt="" />
+        <p>Редактирование данных</p>
+      </div>
+      <div class="editingData_main visible">
+        <div class="editingWrapper">
+          <label for="" class="editingWrapper__label">Имя
+            <input type="text" class="default__input editInput" id="editName">
+            <p class="error errorName">Имя должно быть больше 3 символов!</p>
+          </label>
+          <label for="" class="editingWrapper__label">Вес
+            <input type="text" class="default__input editInput" id="editWeight">
+            <p class="error weightError">больше 50 КГ и меньше 110 КГ</p>
+          </label>
+          <label for="" class="editingWrapper__label">Цель
+            <input type="text" class="default__input editInput" id="editGoal">
+            <p class="error goalError">больше 40 КГ и меньше 120 КГ</p>
+          </label>
+          <label for="" class="editingWrapper__label">Рост
+            <input type="text" class="default__input editInput" id="editHeight">
+            <p class="error heightError">Больше 140 СМ и меньше 220 СМ</p>
+          </label>
+      </div>
+        <button class="btnSignIn btnTwo editingBtn" onclick="" id="btnSignIn">Сохранить</button>
+      </div>
+      <p class="editingData_main__text">Данные сохранены!</p>
+    </section>
+    <section class="allExercise-section">
+      <div class="allPLans-section__title" onclick="backToMain()">
+        <img src="img/back(white).svg" alt="">
+        <p>Планы тренировок</p>
+      </div>
+      <div class="allExercise-section__wrapper"></div>
+      </div>
+    </section>
+    <section class="addExercise-section visible">
+      <div class="allPLans-section__title" onclick="goToProfileAtAddExercise()">
+        <img src="img/back(white).svg" alt="" />
+        <p>Добавление упражнений</p>
+      </div>
+        <form id="addExerciseForm" class="addExercise-section-main exerciseSectionAdd" onsubmit="addExercise(event)">
+          <label for="muscleGroupSelect" class="label-exerice">Группа мышц:
+            <select id="muscleGroupSelect" class="input-exercise" required></select>
+          </label>
+          
+  
+          <label for="exerciseName" class="label-exerice">Название упражнения:
+            <input type="text" id="exerciseName" class="input-exercise" required>
+          </label>
+          
+  
+          <label for="exerciseRepetitions" class="label-exerice">Количество повторений:
+            <input type="number" id="exerciseRepetitions" class="input-exercise" required>
+          </label>
+          
+  
+          <label for="exerciseImgURL" class="label-exerice">URL изображения:
+            <input type="text" id="exerciseImgURL" class="input-exercise" required>
+          </label>
+          
+  
+          <label for="exerciseDescription" class="label-exerice">Описание:
+            <textarea id="exerciseDescription" class="input-exercise" required></textarea>
+          </label>
+          
+          <button type="submit" id="addExercise-btn" class="btnTwo">Добавить упражнение</button>
+      </form>
+      </section>
+      <p class="addExercise-section-main__text">Данные сохранены!</p>
+    </section>
+    <section class="userEdit-section">
+      <div class="allPLans-section__title" onclick="goToProfile()">
+        <img src="img/back(white).svg" alt="" />
+        <p>Редактирование данных</p>
+      </div>
+      <div class="userEdit-section__form-wrapper">
+        <div class="adminTable table">
+          <p class="tableTitle">Администраторы</p>
+        </div>
+        <div class="trainerTable table">
+          <p class="tableTitle">Тренера</p>
+        </div>
+        <div class="userTable table">
+          <p class="tableTitle">Пользователи</p>
+        </div>
+      </div>
+      <div class="removePlan-section">Планы тренировок</div>
+    </section>
+    <section class="addPlan-section visible">
+      <div class="allPLans-section__title" onclick="goToProfile()">
+        <img src="img/back(white).svg" alt="" />
+        <p>Добавление плана</p>
+      </div>
+    </section>
+    <div>
+    </div>
+  </body>
+</html>

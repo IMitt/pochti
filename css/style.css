@@ -1,0 +1,1086 @@
+* {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 414px;
+  max-height: 896px;
+}
+
+input {
+  outline: none;
+}
+
+.sign {
+  font-family: "Unbounded", sans-serif;
+  height: 100svh;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 35px;
+  gap: 10px;
+}
+
+.text_white {
+  color: white;
+}
+
+.text_grey {
+  color: #bdbdbd;
+}
+
+.sign-section__wrapper {
+  background-image: url(../img/signGradiant.png);
+  min-height: calc(100svh - 70px);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+  transition: min-height 0.5s cubic-bezier(0.25, 0.1, 0.22, 1.84);
+  padding-top: 40px;
+}
+
+input[type="text"]::placeholder {
+  text-align: left;
+}
+
+input[type="number"]::placeholder {
+  text-align: left;
+}
+
+input[type="number"] {
+  text-align: center;
+}
+
+.sign-section__title {
+  width: 290px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-align: center;
+  font-size: 32px;
+  align-self: center;
+}
+
+.sign-section__slogan {
+  width: 295px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+.btn-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.btnFirst {
+  padding: 16px 0px;
+  background-color: #ffffff;
+  border: 2px solid #132b35;
+  border-radius: 16px;
+  min-width: calc(100vw - 70px);
+  max-width: calc(100vw - 70px);
+}
+
+.btnTwo {
+  padding: 16px 0px;
+  background-color: #c2d076;
+  border: none;
+  border-radius: 16px;
+  min-width: calc(100vw - 70px);
+  max-width: calc(100vw - 70px);
+}
+
+.linkCreate {
+  text-decoration: none;
+  color: #007aff;
+}
+
+.signIn {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 20px 16px;
+  border: 2px solid black;
+  border-radius: 16px;
+}
+
+.or {
+  display: none;
+  font-size: 16px;
+  gap: 15px;
+  align-items: center;
+}
+
+.signUp {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.documentation {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+input[type="checkbox"] {
+  width: 80px;
+  height: 40px;
+  margin-right: 10px;
+  border: 0;
+  outline: 0;
+}
+
+.check {
+  width: 32px;
+  height: 32px;
+}
+
+.step {
+  display: none;
+  align-self: center;
+  flex-direction: column;
+  max-width: calc(100vw - 70px);
+  gap: 70px;
+  margin: 70px 20px;
+}
+
+.back {
+  width: 10px;
+  height: 14px;
+}
+
+.text {
+  display: flex;
+}
+
+.step-section__title {
+  font-size: 24px;
+  max-width: calc(100vw - 70px);
+}
+
+.step-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* main-section */
+
+.main-section {
+  display: none;
+  flex-direction: column;
+  padding: 20px 20px 0px 20px;
+}
+
+.main-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-section__plan_title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.goTo {
+  height: 18px;
+}
+
+.welcome {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.main-section__slogan {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.avatar {
+  background-color: #c2d076;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+}
+
+.main-section__plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section__plan_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.main-section__go {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(../img/Medium.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 406px;
+  width: calc(100svw - 40px);
+  padding: 25px;
+  border-radius: 24px;
+  margin-bottom: 35px;
+}
+
+#plan-1 {
+  background-image: url(../img/plan-1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#plan-3 {
+  background-image: url(../img/plan-3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.plan-card__btn {
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  align-items: center;
+  gap: 3px;
+}
+
+.allExercise-section {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.plan-card__title {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.plan-card__text {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.plan-card__btn-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.exercise {
+  background-image: url(../img/грудные.png);
+  min-height: 180px;
+  color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.exercise__title {
+  font-size: 32px;
+  max-width: 180px;
+  font-weight: 400;
+}
+
+.allExercise-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 20px;
+  margin: 20px 0px;
+}
+
+.footer {
+  position: sticky;
+  background-color: #ffffff;
+  width: 100vw;
+  bottom: 0;
+  align-self: center;
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.footer__btn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.footer__btn-1 {
+  background-image: url(../img/menuActive.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__btn-2 {
+  background-image: url(../img/status.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__btn-3 {
+  background-image: url(../img/profile.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.status-section {
+  display: none;
+  flex-direction: column;
+  padding: 20px 20px 0px 20px;
+  height: 100svh;
+  gap: 30px;
+}
+
+.status-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-info_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: 3px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #282a2c;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+}
+
+.user-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-plan__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.purposes-info {
+  display: flex;
+  background-color: #282a2c;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+}
+
+.user-info__title {
+  color: #c2d076;
+  font-weight: 500;
+}
+
+.user-info__text {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.user-plan__card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+}
+
+.user-plan__text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.profile-section {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #132b35;
+  height: 100svh;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 20px;
+  gap: 20px;
+}
+
+.profile-section__exit {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 5px;
+  padding: 20px;
+}
+
+.profile-section__main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.profile-section__link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-section__top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+.profile-section__title {
+  font-size: 24px;
+}
+
+.plans-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.plans-section__title-wrapper {
+  display: flex;
+  align-items: center;
+  background-image: url(../img/mediumPlan.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20svh;
+  width: 100vw;
+  gap: 15px;
+  padding: 20px;
+}
+
+.backWhite {
+  width: 20px;
+  height: 20px;
+}
+
+.plans-section__title {
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.plans-section__info {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid grey;
+  align-items: center;
+}
+
+.create-line {
+  width: 20px;
+  border-top: 2px solid #000000;
+  rotate: 90deg;
+}
+
+.line {
+  width: calc((100svw / 2) - 80px);
+  border-top: 1px solid #000000;
+}
+
+.plans-section__exercise-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0px 35px 0px 25px;
+  width: calc(100svw);
+}
+
+.plans-section__exercise-title {
+  display: flex;
+  font-size: 16px;
+  width: 100%;
+}
+
+.plans-section__exercise-border {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #adadad;
+}
+
+.plans-section__exercise-text {
+  font-size: 12px;
+}
+
+.plans-section__exercise-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 0px 25px 0px;
+  width: 100%;
+}
+
+.plans-section__closed {
+  display: flex;
+  padding: 10px;
+  align-self: center;
+  rotate: 180deg;
+}
+
+.plans-section__footer {
+  display: flex;
+  background-color: #fff;
+  height: 80px;
+  justify-content: center;
+  gap: 35px;
+  align-items: center;
+  min-width: 100vw;
+}
+
+.btnStart {
+  padding: 16px 80px;
+  background-color: #c2d076;
+  border: none;
+  border-radius: 16px;
+}
+
+.plans-section {
+  display: none;
+  width: 100%;
+}
+
+.allPLans-section {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 20px 0px 20px;
+  gap: 30px;
+}
+
+.allPLans-section__title {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  /* background-color: #c2d076; */
+  background-color: #000000;
+  width: 100vw;
+  color: #fff;
+  font-size: 28px;
+  align-items: center;
+  padding: 20px;
+}
+
+.editingData_section {
+  display: none;
+  flex-direction: column;
+}
+
+.editingData_main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 80px;
+  justify-content: center;
+}
+
+.editingText {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding: 20px 0px;
+  justify-content: space-between;
+}
+
+.emailEditing {
+  display: flex;
+  font-size: 20px;
+}
+
+.editingBtn {
+  background-color: #c2d076;
+  transition: background-color 0.5s ease;
+  align-self: center;
+}
+
+button {
+  background-color: #c2d076;
+  transition: background-color 0.5s ease;
+  align-self: center;
+}
+
+.goalErrorFirst {
+  display: none;
+}
+
+.heightErrorFirst {
+  display: none;
+}
+
+.editingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.exerciseInfo-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.exerciseInfo-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 20px;
+}
+
+.exerciseInfo-section__title {
+  font-size: 24px;
+}
+
+.exerciseInfo-section__text {
+  font-size: 16px;
+}
+
+.btnInfo {
+  align-self: center;
+}
+
+.plans-section__add {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add_input {
+  width: 130px;
+  border: 2px solid #c2d076;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.plans-section__input {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.btnActive {
+  background-image: none;
+  background: none;
+  background: #c2d076;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.label__input {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 130px;
+}
+
+.default__input {
+  display: flex;
+  border: 2px solid rgb(161, 161, 161);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.editingWrapper__label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.default__input:hover {
+  border: 2px solid #c2d076;
+}
+
+.error {
+  align-self: center;
+  color: red;
+  font-size: 12px;
+}
+
+.errorName {
+  display: none;
+}
+
+.weightError {
+  display: none;
+}
+
+.goalError {
+  display: none;
+}
+
+.heightError {
+  display: none;
+}
+
+.weightErrorFirst {
+  display: none;
+}
+
+.editingBtn:disabled {
+  background-color: #282a2c;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+button:disabled {
+  background-color: #282a2c;
+  color: #a1a1a1;
+  transition: background-color 0.5s ease;
+}
+
+*:focus {
+  outline: 0;
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hidden {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.visible {
+  opacity: 0;
+  animation: visible 0.5s forwards;
+}
+
+.hidden {
+  opacity: 1;
+  animation: hidden 0.5s forwards;
+}
+
+/* 
+.visible {
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden; 
+} */
+
+.editingData_main__text {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  font-size: 26px;
+  color: rgb(139, 139, 139);
+  align-self: center;
+}
+
+.password-error {
+  display: none;
+}
+
+.password-errorSecond {
+  display: none;
+}
+
+.admin {
+  display: none;
+}
+
+.trainer {
+  display: none;
+}
+
+.addExercise-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.addExercise-section-main {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.exerciseSectionAdd {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+}
+
+input:focus {
+  outline: none;
+}
+
+.label-exerice {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.addExercise-section {
+  display: none;
+}
+
+.input-exercise {
+  display: flex;
+  border: 2px solid rgb(161, 161, 161);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  width: calc(100svw - 40px);
+}
+
+.addExercise-section-main__text {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  font-size: 26px;
+  color: rgb(139, 139, 139);
+  align-self: center;
+  z-index: -5;
+}
+
+.userEdit-section {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: calc(100svw - 40px);
+  align-self: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tableTitle {
+  padding: 10px 20px;
+  font-size: 22px;
+  background: #132b35;
+  color: white;
+}
+
+.userEdit-section__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+th {
+  background: #282a2c;
+  color: #c2d076;
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+td {
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+.addPlan-section {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.createPlan-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px 20px 20px;
+  gap: 20px;
+}
+
+.firstStepAddPlan {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
+}
+
+.secondStepAddPlan {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
+}
+
+.plans-section__active {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.plans-section__active-top {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+}
+
+.inputAdd {
+  display: flex;
+  border: 2px solid rgb(161, 161, 161);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  width: calc(50svw - 40px);
+}
+
+.btnAddCompleted {
+  align-self: center;
+}
+
+.namePlanError {
+  display: none;
+}
+
+.descriptionPlanError {
+  display: none;
+}
+
+.durationPlanError {
+  display: none;
+}
+
+.caloriesPlanError {
+  display: none;
+}
+
+.urlImageError {
+  display: none;
+}
+
+.labelAddPlan {
+  display: flex;
+  flex-direction: column;
+}
+
+.repetitionsAddPlanError {
+  display: none;
+}
+
+.addPlan_main__text {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  font-size: 26px;
+  color: rgb(139, 139, 139);
+  align-self: center;
+}
+
+.workoutItem {
+  background: -webkit-linear-gradient(90deg, #222333, #907578);
+  background: linear-gradient(254deg, #222333, #907578);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#workoutList {
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  gap: 5px;
+}
+
+.workoutItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.approachesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workoutList__clear {
+  font-size: 20px;
+  padding: 20px 0px;
+  color: rgb(139, 139, 139);
+  align-self: center;
+  font-weight: 400;
+}
